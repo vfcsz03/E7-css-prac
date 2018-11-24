@@ -10,21 +10,22 @@ body{
     font-family: ;
 }
 
+body>.content {
+    margin: 0px 332px 0 5px;
+}
 
 /*=====================
 $HEADER
 =====================*/
 
 #header {
-  background-color: #011627;
-  background: url(%%headerimg%%) no-repeat;
+  background: url(%%headerimg%%) no-repeat ;
   background-position: top;
-  height: 185px;
+  height: 215px;
   position: relative;
-  border-bottom: none;  
+  border-bottom: none;
+  background-color: #011627;  
 }
-
-
 
 #header-img.default-header {
   display: none;
@@ -38,7 +39,7 @@ $HEADER
     background-image:url(%%epic7rr%%);
     display: block;
     visibility: visible!important;
-    background-position: 40px -5px;
+    background-position: 40px 5px;
     background-repeat: no-repeat;
     width: 240px;
     height: 140px;
@@ -48,7 +49,7 @@ $HEADER
 .pagename a:hover {background-image:url(%%epic7rrhover%%);
     display: block;
     visibility: visible!important;
-    background-position: 40px -5px;
+    background-position: 40px 5px;
     background-repeat: no-repeat;
     width: 240px;
     height: 140px;
@@ -59,7 +60,7 @@ $HEADER
     background-color: #011627;
     z-index: 10000;
     right: 15px;
-    top:165px!important;
+    top:195px!important;
     opacity: 0.45;
     transition: opacity 0.2s ease;
 }
@@ -69,7 +70,7 @@ $HEADER
 }
 
 .res #header-bottom-right { 
-    top:168px!important;
+    top:198px!important;
 }
 
 .user .userkarma{
@@ -116,6 +117,25 @@ $HEADER
   padding: 6px 8px 2px;
 }
 
+#sr-header-area{
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+
+#sr-header-area{
+  background-color: #011627;
+  border: none
+}
+
+#sr-header-area .sr-bar a{
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#sr-header-area .sr-bar a:hover{
+  color: #fff;
+}
 
 /*=====================
 $CONTENT
@@ -169,3 +189,127 @@ background-color: #476a96;
 }
 
 
+
+/*=====================
+$SIDE.BAR & Search
+=====================*/
+
+.side:before {
+display: block;
+position: relative;
+width: 290px;
+vertical-align: bottom;
+text-align: center;
+color: #fff;
+background: url(%%sidebar1%%) no-repeat; /* 300PX WIDE */
+content: "";
+padding-top: 150px; /* HEIGHT */
+}
+
+.side {
+  background-color: #fff;
+  border-width: 0;
+  border-bottom: 2px solid #011627;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 10px;
+  width: 300px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.side .spacer {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.sidebox .morelink {
+  background: none;
+  border-width: 0;
+  font-size: 13px;
+  height: auto;
+  line-height: 1;
+  padding: 0;
+  text-align: left;
+}
+
+.sidebox .morelink a {
+  background-color: #334452;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-weight: normal;
+  padding: 10px 12px;
+  transition: all .2s ease;
+}
+
+.sidebox .morelink a:before {
+  content: '[+]';
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.sidebox .morelink a:active {
+  background-color: #5B6974;
+}
+
+.sidebox .morelink .nub {
+  display: none;
+}
+
+.sidebox.create .spacer {
+  display: none;
+}
+
+#search {
+  position: relative;
+}
+
+#search input[type=text] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #eee;
+  border-radius: 0;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  transition: all .2s ease;
+}
+
+#search input[type=text]:focus {
+  border-bottom-color: #011627;
+}
+
+#searchexpando {
+  background-color: white;
+  border-width: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 10px;
+}
+
+#searchexpando p {
+  display: none!important;
+}
+
+.subscribers .word {
+  display: none;
+}  
+.subscribers .number::after {
+  content: " E7 Players";
+}
+
+/*users here now*/
+.users-online .word {
+  display: none;
+}
+.users-online .number::after {
+  content: " stuck in re-roll hell  ";
+}
+
+.fancy-toggle-button a {
+    color: #F2F2F2 !important;
+    background:#011627  !important;
+    border:  !important
+}
