@@ -1,0 +1,171 @@
+/* E7 Test Css */
+
+/*=====================
+$BODY
+=====================*/
+
+body{
+    background:#e2e2e2;
+    position: relative;
+    font-family: ;
+}
+
+
+/*=====================
+$HEADER
+=====================*/
+
+#header {
+  background-color: #011627;
+  background: url(%%headerimg%%) no-repeat;
+  background-position: top;
+  height: 185px;
+  position: relative;
+  border-bottom: none;  
+}
+
+
+
+#header-img.default-header {
+  display: none;
+}
+
+.pagename {
+  font-size: 0;
+}
+
+.pagename a{
+    background-image:url(%%epic7rr%%);
+    display: block;
+    visibility: visible!important;
+    background-position: 40px -5px;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 140px;
+
+}
+
+.pagename a:hover {background-image:url(%%epic7rrhover%%);
+    display: block;
+    visibility: visible!important;
+    background-position: 40px -5px;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 140px;
+    transition: opacity 0.2s ease-in;
+}
+
+#header-bottom-right { 
+    background-color: #011627;
+    z-index: 10000;
+    right: 15px;
+    top:165px!important;
+    opacity: 0.45;
+    transition: opacity 0.2s ease;
+}
+
+#header-bottom-right:hover {
+  opacity: 1;
+}
+
+.res #header-bottom-right { 
+    top:168px!important;
+}
+
+.user .userkarma{
+    font-weight:normal;
+}
+
+#header-bottom-right a, #header-bottom-right .user {
+    color: white;
+    text-shadow: #222 0px 1px 0px; }
+
+#header-bottom-right .pref-lang, #header-bottom-right .logout {
+    font-weight: normal;
+}
+ 
+#header-bottom-right a:hover{
+    color: #A8AFF5;
+    text-decoration: none;
+}
+
+#header-bottom-left .tabmenu {
+  background-color: #011627;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0px;
+}
+
+#header-bottom-left .tabmenu li {
+  display: inline-block;
+  margin: 0;
+}
+
+
+#header-bottom-left .tabmenu li a {
+  background-color: #011627;
+  border: none;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 110%;
+  color: #e3e3e3;
+  padding: 6px 8px 2px;
+}
+
+
+/*=====================
+$CONTENT
+=====================*/
+
+.content {
+  box-sizing: border-box;
+  margin: 0;
+  margin-right: 300px;
+  padding: 10px;
+  padding-top: 17px;
+}
+
+
+/*=====================
+$LINK.FLAIR
+=====================*/
+
+.linkflairlabel{
+    max-width: none;
+    color: white;
+    border-radius: 2px;
+    border:none;
+    padding: 0px 3px 0 3px;
+    line-height: 13px;
+}
+
+.linklisting .thing {
+    border:  none;
+    border-left:  4px #AFAFAF solid;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+    border-radius: 2px;
+}
+
+/* it's important to have these border colors under here cause it overwrites the default color above */
+
+.linkflair-image.thing{
+border-color:#49af77;
+}
+.linkflair-image .linkflairlabel{
+background-color: #49af77;
+}
+
+.linkflair-info.thing{
+border-color: #476a96;
+}
+.linkflair-info .linkflairlabel{
+background-color: #476a96;
+}
+
+
