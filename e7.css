@@ -1,8 +1,6 @@
 /* E7 Test Css */
 
-/*=====================
-$BODY
-=====================*/
+/*=====================$BODY=====================*/
 
 body{
     background:#e2e2e2;
@@ -14,9 +12,7 @@ body>.content {
     margin: 0px 332px 0 5px;
 }
 
-/*=====================
-$HEADER
-=====================*/
+/*=====================$HEADER=====================*/
 
 #header {
   background: url(%%headerimg%%) no-repeat ;
@@ -24,11 +20,32 @@ $HEADER
   height: 215px;
   position: relative;
   border-bottom: none;
-  background-color: #011627;  
+  background-color: #011627;
 }
 
 #header-img.default-header {
   display: none;
+}
+
+#header .tabmenu a{
+    background: none;
+    border: 0;
+    color: #FFF;
+    text-shadow: 0 0 2px #006cb0;
+    font-size: 90%;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+}
+
+#header .tabmenu a:hover{
+    color: #FFFF66;
+    text-shadow: 0 0 2px #FFFF66;
+}
+
+#header .tabmenu .selected a {
+    color: #66a6cf;
+    text-shadow: 0 0 2px #66a6cf;
 }
 
 .pagename {
@@ -56,11 +73,11 @@ $HEADER
     transition: opacity 0.2s ease-in;
 }
 
-#header-bottom-right { 
+#header-bottom-right {
     background-color: #011627;
     z-index: 10000;
     right: 15px;
-    top:195px!important;
+    top:192px!important;
     opacity: 0.45;
     transition: opacity 0.2s ease;
 }
@@ -69,8 +86,8 @@ $HEADER
   opacity: 1;
 }
 
-.res #header-bottom-right { 
-    top:198px!important;
+.res #header-bottom-right {
+    top:191px!important;
 }
 
 .user .userkarma{
@@ -84,7 +101,7 @@ $HEADER
 #header-bottom-right .pref-lang, #header-bottom-right .logout {
     font-weight: normal;
 }
- 
+
 #header-bottom-right a:hover{
     color: #A8AFF5;
     text-decoration: none;
@@ -137,9 +154,7 @@ $HEADER
   color: #fff;
 }
 
-/*=====================
-$CONTENT
-=====================*/
+/*=====================$CONTENT=====================*/
 
 .content {
   box-sizing: border-box;
@@ -149,10 +164,7 @@ $CONTENT
   padding-top: 17px;
 }
 
-
-/*=====================
-$LINK.FLAIR
-=====================*/
+/*=====================$LINK.FLAIR=====================*/
 
 .linkflairlabel{
     max-width: none;
@@ -172,7 +184,7 @@ $LINK.FLAIR
     border-radius: 2px;
 }
 
-/* it's important to have these border colors under here cause it overwrites the default color above */
+/* jimmy it's important to have these border colors under here cause it overwrites the default color above */
 
 .linkflair-image.thing{
 border-color:#49af77;
@@ -188,39 +200,68 @@ border-color: #476a96;
 background-color: #476a96;
 }
 
+html:lang(img) .link:not(.linkflair-image){
+  display:none
+}
 
+html:lang(info) .link:not(.linkflair-info){
+  display:none
+}
 
-/*=====================
-$SIDE.BAR & Search
-=====================*/
+.side .md [href*="search?q=flair"] {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-width: 3px;
+    border-radius: 4px;
+    margin: 2px;
+    text-align: center;
+}
+
+.side .md [href*="search?q=flair%3AImage"] {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.side .md [href*="search?q=flair%3AInfo"] {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+}
+
+/*=====================$SIDE.BAR & Search=====================*/
 
 .side:before {
-display: block;
-position: relative;
-width: 290px;
-vertical-align: bottom;
-text-align: center;
-color: #fff;
-background: url(%%sidebar1%%) no-repeat; /* 300PX WIDE */
-content: "";
-padding-top: 150px; /* HEIGHT */
+  display: block;
+  position: relative;
+  width: 300px;
+  vertical-align: bottom;
+  text-align: center;
+  background: url(%%sidebar1%%) no-repeat;
+  content: "";
+  padding-top: 150px; /* HEIGHT */
 }
 
 .side {
-  background-color: #fff;
+  background-color: transparent;
   border-width: 0;
-  border-bottom: 2px solid #011627;
+  border-bottom: 0px solid #011627;
   box-sizing: border-box;
-  padding: 5px;
   margin: 10px;
   width: 300px;
   position: relative;
-  margin-top: 15px;
 }
 
-.side .spacer {
-  margin: 0 0 10px;
-  padding: 0;
+.side .spacer .titlebox, .side .spacer .sidecontentbox {
+   padding: 5px;
+   background: white;
+   box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+   border-radius: 0px;
+   margin-top: 15px;
 }
 
 .sidebox .morelink {
@@ -262,40 +303,110 @@ padding-top: 150px; /* HEIGHT */
   display: none;
 }
 
+#search input[type=submit] {
+      top: 7px;
+      position: relative;
+}
+
+body.res-nightmode #search {
+        background-color: transparent;
+        border-color: #BBB;
+}
+
+.side .spacer:nth-of-type(1), .side .spacer:nth-of-type(2) {
+      margin: 0px;
+}
+
+
+.sidecontentbox:hover{
+    box-shadow: 0 2px 10px rgba(51,102,153,0.3);
+}
+
+.sidecontentbox a.helplink{
+    margin-right: 10px;
+}
+
+.sidecontentbox .title{
+    display: block;
+    background-color: #334452;
+    border-bottom: 1px solid #334452;
+    padding: 5px;
+    font-family: Arial;
+}
+
+.sidecontentbox .title h1{
+    color: #fff;
+    font-size: 10px;
+}
+
+.sidecontentbox .content{
+    border: none;
+    padding: 5px;
+    background-color: #5B6974;
+}
+
+.icon-menu li{
+    margin: 1px 0;
+}
+
+.icon-menu a{
+    background: none;
+    display: block;
+    padding: 5px 0;
+    transition: all 0.2s ease-in;
+}
+
+.icon-menu a:hover{
+    text-decoration: none;
+    background-color: #7F6065;
+    padding-left: 5px;
+}
+
 #search {
-  position: relative;
+      white-space: nowrap;
 }
-
-#search input[type=text] {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 2px solid #eee;
-  border-radius: 0;
-  outline: none;
-  padding: 8px;
-  width: 100%;
-  transition: all .2s ease;
+.side .spacer #search input[type=text] {
+      z-index: 100;
+      border: none;
+      font-size: 14px;
+      width: 300px;
+      background: white;
+      padding: 3px;
+      margin-bottom: 10px;
+      padding: 10px 25px 10px 16px;
+      border-radius: 2px;
+      margin-top: 10px;
+      box-shadow: 0px 2px 4px rgba(0,0,0,.2);
 }
-
-#search input[type=text]:focus {
-  border-bottom-color: #011627;
+    
+.res-nightmode .side .spacer #search input[type=text]{
+        background-color: #444;
 }
-
-#searchexpando {
-  background-color: white;
-  border-width: 0;
-  border-radius: 0;
-  margin: 0;
-  padding: 10px;
+    
+#searchexpando{
+        box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+        border-radius: 2px;
+        border:0px;
+        position: absolute;
+        z-index: 99;
+        width: 280px;
+        height: auto;
+        right: 0px;
+        line-height: 25px;
 }
-
-#searchexpando p {
-  display: none!important;
+    
+#moresearchinfo {
+        border: none;
+        margin-top: 5px;
+}
+    
+#searchexpando select {
+        margin-left: 5px;
 }
 
 .subscribers .word {
   display: none;
-}  
+}
 .subscribers .number::after {
   content: " E7 Players";
 }
@@ -312,4 +423,30 @@ padding-top: 150px; /* HEIGHT */
     color: #F2F2F2 !important;
     background:#011627  !important;
     border:  !important
+}
+
+
+.side blockquote + hr, .RESDialogContents blockquote+hr {
+    border-width:0;
+    width:0;
+    background-color:transparent;
+    margin:10px 0 0;
+}
+
+.side blockquote, .RESDialogContents blockquote {
+    border:0 none;
+    padding:10px;
+    margin:0;
+    background-color: #334452 ; /*color of boxes*/
+    border-radius:2px;
+    border-bottom:3px solid #A69CAC;
+    color: white; /*color of text*/
+}
+
+.side .spacer .md h1, .side .spacer .md h2, .side .spacer .md h3 { 
+  background: transparent !important; 
+}
+
+.side a{
+  color: #FFC0CB; /*color of links*/
 }
