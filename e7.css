@@ -184,7 +184,7 @@ body>.content {
     border-radius: 2px;
 }
 
-/* jimmy it's important to have these border colors under here cause it overwrites the default color above */
+/* it's important to have these border colors under here cause it overwrites the default color above */
 
 .linkflair-image.thing{
 border-color:#49af77;
