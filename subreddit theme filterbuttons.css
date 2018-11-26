@@ -1,0 +1,42 @@
+.side .md [href*="search?q=flair"] {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-width: 3px;
+    border-radius: 4px;
+    margin: 2px;
+    text-align: center;
+}
+
+.side .md [href*="search?q=flair%3AImage"] {
+    background-color: #49af77;
+    border-color: #49af77;
+    color: white;
+}
+
+.side .md [href*="search?q=flair%3AInfo"] {
+    background-color: #476a96;
+    border-color: #476a96;
+    color: white;
+}
+
+.side .md [href*="search?q=flair%3AQuestion"] {
+    background-color: #EBBB32;
+    border-color: #EBBB32;
+    color: white;
+}
+
+.side .md [href*="search?q=flair%3AAnnouncement"] {
+    background-color: #FF4444;
+    border-color: #FF4444;
+    color: white;
+}
+
+.side .md [href*="search?q=flair%3ADiscussion"] {
+    background-color: #FF7F50;
+    border-color: #FF7F50;
+    color: white;
+}
