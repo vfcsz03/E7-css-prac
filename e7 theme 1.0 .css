@@ -1,0 +1,619 @@
+/*-------------------------------------------------
+ E7 Subreddit Css 1.0
+theme by /u/Rinczmia
+inspired by r/starcraft, r/soccerspirits , r/grandorder
+-------------------------------------------------*/
+
+/*=====================$BODY=====================*/
+
+body{
+    background:#e2e2e2;
+    position: relative;
+    font-family: ;
+}
+
+body>.content {
+    margin: 0px 332px 0 5px;
+}
+
+.footer-parent {
+    height: 300px;
+    background-image: url(%%footerrr%%);
+    text-align: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e2e2e2;
+}
+
+/*=====================$HEADER=====================*/
+
+#header {
+  background: url(%%headerimg%%) no-repeat ;
+  background-position: top;
+  height: 215px;
+  position: relative;
+  border-bottom: none;
+  background-color: #011627;
+}
+
+#header-img.default-header {
+  display: none;
+}
+
+#header .tabmenu a{
+    background: none;
+    border: 0;
+    color: #FFF;
+    text-shadow: 0 0 2px #006cb0;
+    font-size: 90%;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+}
+
+#header .tabmenu a:hover{
+    color: #FFFF66;
+    text-shadow: 0 0 2px #FFFF66;
+}
+
+#header .tabmenu .selected a {
+    color: #66a6cf;
+    text-shadow: 0 0 2px #66a6cf;
+}
+
+.pagename {
+  font-size: 0;
+}
+
+.pagename a{
+    background-image:url(%%epic7rr%%);
+    display: block;
+    visibility: visible!important;
+    background-position: 40px 5px;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 140px;
+
+}
+
+.pagename a:hover {background-image:url(%%epic7rrhover%%);
+    display: block;
+    visibility: visible!important;
+    background-position: 40px 5px;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 140px;
+    transition: opacity 0.2s ease-in;
+}
+
+#header-bottom-right {
+    background-color: #011627;
+    z-index: 10000;
+    right: 15px;
+    top:192px!important;
+    opacity: 0.45;
+    transition: opacity 0.2s ease;
+}
+
+#header-bottom-right:hover {
+  opacity: 1;
+}
+
+.res #header-bottom-right {
+    top:191px!important;
+}
+
+.user .userkarma{
+    font-weight:normal;
+}
+
+#header-bottom-right a, #header-bottom-right .user {
+    color: white;
+    text-shadow: #222 0px 1px 0px; }
+
+#header-bottom-right .pref-lang, #header-bottom-right .logout {
+    font-weight: normal;
+}
+
+#header-bottom-right a:hover{
+    color: #A8AFF5;
+    text-decoration: none;
+}
+
+#header-bottom-left .tabmenu {
+  background-color: #011627;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0px;
+}
+
+#header-bottom-left .tabmenu li {
+  display: inline-block;
+  margin: 0;
+}
+
+
+#header-bottom-left .tabmenu li a {
+  background-color: #011627;
+  border: none;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 110%;
+  color: #e3e3e3;
+  padding: 6px 8px 2px;
+}
+
+#sr-header-area{
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+
+#sr-header-area{
+  background-color: #011627;
+  border: none
+}
+
+#sr-header-area .sr-bar a{
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#sr-header-area .sr-bar a:hover{
+  color: #fff;
+}
+
+/*=====================$CONTENT=====================*/
+
+.content {
+  box-sizing: border-box;
+  margin: 0;
+  margin-right: 300px;
+  padding: 10px;
+  padding-top: 17px;
+}
+
+/*=================$LINK.FLAIR & Filters=================*/
+
+.linkflairlabel{
+    max-width: none;
+    color: white;
+    border-radius: 2px;
+    border:none;
+    padding: 0px 3px 0 3px;
+    line-height: 13px;
+}
+
+.linklisting .thing {
+    border:  none;
+    border-left:  4px #AFAFAF solid;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+    border-radius: 2px;
+}
+
+/* it's important to have these border colors under here cause it overwrites the default color above */
+
+.linkflair-fluff.thing{border-color:#9a9d84;}
+.linkflair-fluff .linkflairlabel{background-color: #9a9d84;}
+
+.linkflair-event.thing{border-color: #272D33;}
+.linkflair-event .linkflairlabel{background-color: #272D33;}
+
+.linkflair-announcement.thing{border-color: #9d1600;}
+.linkflair-announcement .linkflairlabel{background-color: #9d1600;}
+
+.linkflair-guide.thing{border-color: #005000;}
+.linkflair-guide .linkflairlabel{background-color: #005000;}
+
+.linkflair-OC.thing{border-color: #B56E38;}
+.linkflair-OC .linkflairlabel{background-color: #B56E38;}
+
+html:lang(fluff) .link:not(.linkflair-fluff){display:none}
+html:lang(event) .link:not(.linkflair-event){display:none}
+html:lang(announcement) .link:not(.linkflair-announcement){display:none}
+html:lang(guide) .link:not(.linkflair-guide){display:none}
+html:lang(OC) .link:not(.linkflair-OC){display:none}
+
+.side a[href*='search?q=flair']{
+      display: inline-block;
+      position: relative;
+      margin-top:0px;
+      border: 1px solid;
+      border-left-width: 5px;
+      font-size: 100%;
+      padding: 3px;
+      color: black;
+      font-weight: bold;
+      background: white;
+      min-width: 250px;
+      text-align: left;
+      border-radius: 3px;
+}
+
+.side a[href*='search?q=flair%3AFluff']{border-color:#9a9d84 }
+.side a[href*='search?q=flair%3AEvent']{border-color:#272D33 }
+.side a[href*='search?q=flair%3AGuide']{border-color:#005000 }
+.side a[href*='search?q=flair%3AAnnouncement']{border-color:#9d1600 }
+.side a[href*='search?q=flair%3AOC']{border-color:#B56E38 }
+
+
+/*=====================$SIDE.BAR & Search=====================*/
+
+.side:before {
+  display: block;
+  position: relative;
+  width: 300px;
+  vertical-align: bottom;
+  text-align: center;
+  background: url(%%sidebar2%%) no-repeat;
+  content: "";
+  padding-top: 305px; /* HEIGHT */
+}
+
+.side {
+  background-color: transparent;
+  border-width: 0;
+  border-bottom: 0px solid #011627;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-right: 20px;
+  width: 300px;
+  position: relative;
+}
+
+.side .spacer .titlebox, .side .spacer .sidecontentbox {
+   padding: 5px;
+   background: white;
+   box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+   border-radius: 0px;
+   margin-top: 15px;
+}
+
+.side .morelink {
+   background:#fff;
+   box-shadow:0 0 2.75px .25px rgba(0,0,0,0.2);
+   border:none;
+   border-left:4px solid #334452;
+   text-align:center;
+   font-size:14px;
+   height:auto;
+   line-height:14px;
+}
+
+.side .morelink:hover a {
+   color:pink;
+}
+
+.side .morelink a {
+   display:inline-block;
+   padding:15px 10px;
+   color:#334452;
+   text-transform:uppercase;
+   text-decoration:none;
+   box-sizing:border-box;
+}
+
+.side .morelink .nub {
+   display:none;
+}
+
+.sidebox.create .spacer {
+  display: none;
+}
+
+#search input[type=submit] {
+      top: 0px;
+      position: center;
+}
+
+body.res-nightmode #search {
+        background-color: transparent;
+        border-color: #BBB;
+}
+
+.side .spacer:nth-of-type(1), .side .spacer:nth-of-type(2) {
+      margin: 0px;
+}
+
+
+.sidecontentbox:hover{
+    box-shadow: 0 2px 10px rgba(51,102,153,0.3);
+}
+
+.sidecontentbox a.helplink{
+    margin-right: 10px;
+}
+
+.sidecontentbox .title{
+    display: block;
+    background-color: #334452;
+    border-bottom: 1px solid #334452;
+    padding: 5px;
+    font-family: Arial;
+}
+
+.sidecontentbox .title h1{
+    color: #fff;
+    font-size: 10px;
+}
+
+.sidecontentbox .content{
+    border: none;
+    padding: 5px;
+    background-color: #5B6974;
+}
+
+.icon-menu li{
+    margin: 1px 0;
+}
+
+.icon-menu a{
+    background: none;
+    display: block;
+    padding: 5px 0;
+    transition: all 0.2s ease-in;
+}
+
+.icon-menu a:hover{
+    text-decoration: none;
+    background-color: #7F6065;
+    padding-left: 5px;
+}
+
+#search {
+      white-space: nowrap;
+}
+.side .spacer #search input[type=text] {
+      z-index: 100;
+      border: none;
+      font-size: 14px;
+      width: 300px;
+      background: white;
+      padding: 3px;
+      margin-bottom: 10px;
+      padding: 10px 25px 10px 16px;
+      border-radius: 2px;
+      margin-top: 10px;
+      box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+}
+
+.res-nightmode .side .spacer #search input[type=text]{
+        background-color: #444;
+}
+
+#searchexpando{
+        box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+        border-radius: 2px;
+        border:0px;
+        position: absolute;
+        z-index: 99;
+        width: 280px;
+        height: auto;
+        right: 0px;
+        line-height: 25px;
+}
+
+#moresearchinfo {
+        border: none;
+        margin-top: 5px;
+}
+
+#searchexpando select {
+        margin-left: 5px;
+}
+
+.subscribers .word {
+  display: none;
+}
+.subscribers .number::after {
+  content: " E7 Players";
+}
+
+/*users here now*/
+.users-online .word {
+  display: none;
+}
+.users-online .number::after {
+  content: " stuck in re-roll hell  ";
+}
+
+.fancy-toggle-button a {
+    color: #F2F2F2 !important;
+    background:#011627  !important;
+    border:  !important
+}
+
+.side blockquote + hr, .RESDialogContents blockquote+hr {
+    border-width:0;
+    width:0;
+    background-color:transparent;
+    margin:10px 0 0;
+}
+
+.side blockquote, .RESDialogContents blockquote {
+    border:0 none;
+    padding:10px;
+    margin:0;
+    background-color: #334452 ; /*color of boxes*/
+    border-radius:2px;
+    border-bottom:3px solid #A69CAC;
+    color: white; /*color of text*/
+}
+
+.side .spacer .md h1, .side .spacer .md h2, .side .spacer .md h3 {
+  background: transparent !important;
+}
+
+.side a{
+  color: #FFC0CB; /*color of links*/
+}
+
+/*=============User Flairs =============*/
+
+.flair {
+    background: url(%%spritesheet%%) no-repeat -9999px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: 34px;
+    font-size: 10px;
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none!important;
+    transition: all .3s ease-out;
+    transition-delay: .15s;
+    position: relative;
+    color: rgba(0, 0, 0, 0)!important;
+    width: 50px;
+    height: 50px;
+}
+
+.flair:hover {
+    overflow: visible;
+    color: rgba(0, 0, 0, 0)
+}
+
+.flair[title]:after {
+    content: attr(title);
+    position: absolute;
+    color: #F4FAFF;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    text-transform: uppercase;
+    top: 0;
+    left: -10px;
+    background: #fff;
+    box-shadow: 0 1px 10px #fff;
+    padding: 0 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    visibility: hidden;
+    pointer-events: none;
+    text-indent: 0;
+    border-bottom-left-radius: 18px;
+    border-top-left-radius: 18px;
+    transform: scale(0.8, 0.4)
+}
+.flair[title]:before {
+    bottom: 8px;
+    left: 30px!important;
+    box-shadow: 0 0 0 transparent!important;
+    border: solid rgba(0, 0, 0, 0);
+    content: " ";
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: rgba(0, 0, 0, 0);
+    border-width: 8px;
+    margin-left: -10px;
+    background-color: transparent!important
+}
+
+.flair[title]:hover:before,
+.flair[title]:hover:after,
+.flair[title]:active:before,
+.flair[title]:active:after {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    background: #011627;
+    border-right-color: rgba(0, 0, 0, 0);
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    box-shadow: 0 1px 0 rgba(46, 46, 44, 0.35);
+    left: 35px;
+    transition: all .3s cubic-bezier(0.100, 4.235, 0.215, 0.195) .05s, background-color .45s cubic-bezier(0.100, 0.235, 0.215, 1.195) .1s, border-right-color .45s cubic-bezier(0.100, 0.235, 0.215, 1.195) .1s
+}
+
+.flair[title=""]:hover:before {
+    border-right-color: transparent;
+    opacity: 0
+}
+
+.entry {
+    margin-left: 3px;
+    opacity: 1
+}
+
+.res-nightmode .flair {
+    background-color: transparent
+}
+.link .flair,
+.entry .tagline .flair {
+    float: left;
+	background-color: transparent;
+}
+
+.flair-1 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 0;
+}
+
+.flair-10 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -48px;
+}
+
+.flair-11 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -96px;
+}
+
+.flair-2 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -144px;
+}
+
+.flair-3 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -192px;
+}
+
+.flair-4 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -240px;
+}
+
+.flair-5 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -288px;
+}
+
+.flair-6 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -336px;
+}
+
+.flair-7 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -384px;
+}
+
+.flair-8 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -432px;
+}
+
+.flair-9 {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -480px;
+}
