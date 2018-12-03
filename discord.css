@@ -1,6 +1,6 @@
 /*========Discord=======*/
 
-.side a[href="https://discord.gg/CTetAqC"] {
+.side a[href="https://discord.gg/'LINKHERE'"] {
     display: inline-block;
     height: 96px;
     width: 300px;
@@ -8,4 +8,4 @@
 }
 
 
-.side a[href="https://discord.gg/CTetAqC"]:hover {opacity:0.8;transition: .4s opacity ease}
+.side a[href="https://discord.gg/'LINKHERE']:hover {opacity:0.8;transition: .4s opacity ease}
