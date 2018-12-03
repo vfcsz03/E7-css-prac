@@ -1,0 +1,11 @@
+/*========Discord=======*/
+
+.side a[href="https://discord.gg/CTetAqC"] {
+    display: inline-block;
+    height: 96px;
+    width: 300px;
+    background: url(%%discord%%);
+}
+
+
+.side a[href="https://discord.gg/CTetAqC"]:hover {opacity:0.8;transition: .4s opacity ease}
